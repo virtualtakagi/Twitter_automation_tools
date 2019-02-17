@@ -27,8 +27,36 @@ if ($twitterLogin->isLoggedIn()) {
     // if mention
       if(!empty($user_timeline[$tweet_cnt]->in_reply_to_user_id)) {
         $user_tweet[] = $user_timeline[$tweet_cnt]->in_reply_to_user_id;
+        }
+    }
+    // Get Last Tweet ID
+    $user_timeline_count = count($user_timeline) - 1;
+    $lastTweetId = $user_timeline[$user_timeline_count]->id;
+
+  // Get Mention from user_timeline with next page(total:400tweet)
+  $user_timeline = $twitter->getUserTimeline_nextPage($screen_name, $lastTweetId);
+
+  // Get Mention from user_timeline 2nd time
+  for($tweet_cnt = 0; $tweet_cnt < 200; $tweet_cnt++){
+    // if mention
+      if(!empty($user_timeline[$tweet_cnt]->in_reply_to_user_id)) {
+        $user_tweet[] = $user_timeline[$tweet_cnt]->in_reply_to_user_id;
+        }
+    }
+    // Get Last Tweet ID 2nd time
+    $user_timeline_count = count($user_timeline) - 1;
+    $lastTweetId = $user_timeline[$user_timeline_count]->id;
+
+    // Get Mention from user_timeline with next page
+    $user_timeline = $twitter->getUserTimeline_nextPage($screen_name, $lastTweetId);
+
+    // Get Mention from user_timeline 3rd time(total:600tweet)
+    for($tweet_cnt = 0; $tweet_cnt < 200; $tweet_cnt++){
+      // if mention
+        if(!empty($user_timeline[$tweet_cnt]->in_reply_to_user_id)) {
+          $user_tweet[] = $user_timeline[$tweet_cnt]->in_reply_to_user_id;
+          }
       }
-  }
 
   // Mention count
   $mention_count_array = array_count_values($user_tweet);
@@ -44,7 +72,7 @@ if ($twitterLogin->isLoggedIn()) {
   foreach ($mention_count_array as $key => $id) {
     $mention_list_id = $mention_list_id . $key . ",";
     $mention_createid_count++;
-    if($mention_createid_count > 20) {
+    if($mention_createid_count > 9) {
       break;
     }
   }

@@ -72,4 +72,14 @@ class Twitter {
     return $get_user_timeline;
   }
 
+  public function getUserTimeline_nextPage($screen_name, $max_id) {
+    try {
+    $get_user_timeline = $this->_conn->get('statuses/user_timeline', array('screen_name' => $screen_name,
+     'count' => '200', 'exclude_replies' => 'false', 'include_rts' => 'false', 'max_id' => $max_id));
+  } catch (TwitterOAuthException $e) {
+    echo 'Failed to Get Tweets';
+  }
+    return $get_user_timeline;
+  }
+
 }
