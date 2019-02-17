@@ -44,7 +44,7 @@ if ($twitterLogin->isLoggedIn()) {
   foreach ($mention_count_array as $key => $id) {
     $mention_list_id = $mention_list_id . $key . ",";
     $mention_createid_count++;
-    if($mention_createid_count > 19) {
+    if($mention_createid_count > 20) {
       break;
     }
   }
