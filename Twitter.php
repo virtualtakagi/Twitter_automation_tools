@@ -52,6 +52,14 @@ class Twitter {
     }
   }
 
+  public function addMembers_screen_name($id, $members) {
+    try {
+          $add_result = $this->_conn->post('lists/members/create', array('list_id' => $id, 'screen_name' => $members));
+    } catch (TwitterOAuthException $e) {
+      echo 'Failed to Add List';
+    }
+  }
+
   public function getSearchResult($screen_name) {
     try {
     $screen_name = "@" . $screen_name;

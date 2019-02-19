@@ -52,10 +52,13 @@ if ($twitterLogin->isLoggedIn()) {
   // create List and Get ListID, ListSlug
   $list_info = $twitter->createList($list_name);
   $list_id   = $list_info->id;
-  $list_slug = $list_info->slug;
 
   // Add Friend to Created List
   $twitter->addMembers($list_id, $add_friend_id);
+
+  // Add Target User Account to Created List
+  $twitter->addMembers_screen_name($list_id, $screen_name);
+
   echo "処理が完了しました。Twitterアカウントのリストを確認してください。";
 
 }

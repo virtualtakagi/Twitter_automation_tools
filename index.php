@@ -81,7 +81,7 @@ MyApp\Token::create();
       <!-- リスト追加に必要なTwitterアカウントを入力させる -->
       <div id="form" class="col-xs-3">
       -> あの人のTwitterIDを入力してください
-      <form action="main_procedure.php" name="form1" method=“get” onSubmit="return check1()">
+      <form method=“get” action="main_procedure.php" name="form1" onSubmit="return check1()">
         <input class="form-control" placeholder="ツイッターID" type="text" name="user1" size="15">
 
     <!-- 作成するリストの名称を入力させる -->
@@ -146,9 +146,9 @@ MyApp\Token::create();
           <li class="list-group-item">あの人がフォローしている人を一括で自分のリストに追加します。</li>
           <li class="list-group-item">リストに追加することで、あの人とほぼ同じタイムラインを眺めることができます。</li>
           <li class="list-group-item">※ただし、非公開アカウントを除き最大500人までしかリストへ追加することができません。</li>
-          <li class="list-group-item list-group-item-info">1. あの人のTwitterIDを「＠」を抜いて入力します。</li>
-          <li class="list-group-item list-group-item-info">2. 新規に作成し、Twitterアカウントを追加するリストの名称を入力します。</li>
-          <li class="list-group-item list-group-item-info">3. TwitterIDとリスト名を入力したら「実行」をクリックまたはタップします</li>
+          <li class="list-group-item list-group-item-info border-0">1. あの人のTwitterIDを「＠」を抜いて入力します。</li>
+          <li class="list-group-item list-group-item-info border-0">2. 新規に作成し、Twitterアカウントを追加するリストの名称を入力します。</li>
+          <li class="list-group-item list-group-item-info border-0">3. TwitterIDとリスト名を入力したら「実行」をクリックまたはタップします</li>
         </ul>
       </div>
 
