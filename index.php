@@ -47,7 +47,7 @@ MyApp\Token::create();
   }
 
   ul li, ol li {
-  line-height: 0.5; /*文の行高*/
+  line-height: 1.5; /*文の行高*/
   padding: 0.5em 0; /*前後の文との余白*/
   }
    </style>
@@ -135,17 +135,14 @@ MyApp\Token::create();
         </ul>
       </div>
 
-      <p>もう一つのツールをご用意しました。</p>
-
       <h1>リスト追加自動化ツール（仮）</h1>
 
       <div id="discription">
-        このツールの趣旨と使い方について説明します。
         <ul class="list-group">
-          <li class="list-group-item">「あの人のタイムラインをリストで再現」をコンセプトに本ツールを作成しました。</li>
-          <li class="list-group-item">あの人がフォローしている人を一括で自分のリストに追加します。</li>
-          <li class="list-group-item">リストに追加することで、あの人とほぼ同じタイムラインを眺めることができます。</li>
-          <li class="list-group-item">※ただし、非公開アカウントを除き最大500人までしかリストへ追加することができません。</li>
+          <li class="list-group-item border-0">「あの人のタイムラインをリストで再現」をコンセプトに本ツールを作成しました。</li>
+          <li class="list-group-item border-0">あの人がフォローしている人を一括で自分のリストに追加します。</li>
+          <li class="list-group-item border-0">リストに追加することで、あの人とほぼ同じタイムラインを眺めることができます。</li>
+          <li class="list-group-item border-0">※ただし、非公開アカウントを除き最大500人までしかリストへ追加することができません。</li>
           <li class="list-group-item list-group-item-info border-0">1. あの人のTwitterIDを「＠」を抜いて入力します。</li>
           <li class="list-group-item list-group-item-info border-0">2. 新規に作成し、Twitterアカウントを追加するリストの名称を入力します。</li>
           <li class="list-group-item list-group-item-info border-0">3. TwitterIDとリスト名を入力したら「実行」をクリックまたはタップします</li>
