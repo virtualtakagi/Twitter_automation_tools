@@ -70,6 +70,7 @@ MyApp\Token::create();
           <li class="list-group-item border-0">あの人がここ１週間でよく絡む人をリストに自動で追加します。</li>
           <li class="list-group-item border-0">リストに追加することで普段の会話を集中的に見ることができるようになります。</li>
           <li class="list-group-item border-0">普段の会話の他に、どのような人があの人と絡んでいるかが見えるようになります。</li>
+          <li class="list-group-item border-0">※Twitterが不安定な場合は想定した結果が得られないことがあります。その際は、時間を置いて再度実行してください。</li>
         </ul>
         -> 使い方
         <ul class="list-group" class="border border-0">
@@ -98,6 +99,7 @@ MyApp\Token::create();
           <li class="list-group-item border-0">あの人がフォローしている人を一括で自分のリストに追加します。</li>
           <li class="list-group-item border-0">リストに追加することで、あの人とほぼ同じタイムラインを眺めることができます。</li>
           <li class="list-group-item border-0">※ただし、非公開アカウントを除き最大500人までしかリストへ追加することができません。</li>
+          <li class="list-group-item border-0">※Twitterが不安定な場合は想定した結果が得られないことがあります。その際は、時間を置いて再度実行してください。</li>
         </ul>
         -> 使い方
         <ul>
